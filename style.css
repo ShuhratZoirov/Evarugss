@@ -133,40 +133,37 @@ a {
     width: 75%;
 }
 
-.wrapper {
-    width: 100%;
-    padding: 98px 2% 72px 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+section {
+    background-image: linear-gradient(to right, #D4145A40, #2E319240);
 }
 
-section {
-    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+.wrapper {
+    width: 100%;
+    padding: 98px 0 72px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .box {
     width: 32%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFFFFF;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px 0px #00000040;
-}
-
-.box_img {
-    object-fit: cover;
-    max-width: 100%;
-}
-
-.box_text {
+    background-color: white;
+    border-radius: 9px;
+    padding: 64px 40px;
     font-size: 18px;
     font-weight: 300;
     line-height: 21.09px;
     text-align: center;
+    position: relative;
+    object-fit: cover;
+}
+
+.box_img {
+    position: absolute;
+    top: -95px;
+    left: 120px;
+    object-fit: cover;
 }
 
 .text {
@@ -243,12 +240,19 @@ section {
         font-size: 45px;
     }
 
+    .box_img {
+        left: 80px;
+    }
+
     .wrapper1 {
         padding: 140px 110px 117px 110px;
     }
 }
 
 @media only screen and (max-width: 880px) {
+    .box_img {
+        left: 60px;
+    }
 
     .wrapper1 {
         padding: 120px 50px 87px 50px;
@@ -258,11 +262,6 @@ section {
 @media only screen and (max-width: 768px) {
     .nav__list {
         display: none;
-    }
-
-    .wrapper {
-        justify-content: center;
-        row-gap: 100px;
     }
 
     .wrapper1 {
@@ -279,7 +278,13 @@ section {
 
     .box {
         width: 100%;
-        margin-left: 70px;
+        margin-left: 100px;
+    }
+
+    .wrapper {
+        row-gap: 100px;
+        justify-content: center;
+        padding: 100px 40px;
     }
 
     .navbar {
@@ -322,6 +327,9 @@ section {
 }
 
 @media only screen and (max-width: 700px) {
+    .box_img {
+        left: 160px;
+    }
 
     .text_p2 {
         text-align: center;
@@ -340,6 +348,13 @@ section {
 }
 
 @media only screen and (max-width: 660px) {
+    .box_img {
+        left: 155px;
+    }
+
+    .box {
+        margin-left: 95px;
+    }
 
     .wrapper1 {
         margin-left: 50px;
@@ -355,6 +370,14 @@ section {
 
     .wrapper1 {
         margin-left: 45px;
+    }
+
+    .box {
+        margin-left: 72px;
+    }
+
+    .box_img {
+        left: 88px;
     }
 
     .card_item {
@@ -377,6 +400,14 @@ section {
 
     .wrapper1 {
         margin-left: 30px;
+    }
+
+    .box_img {
+        left: 49px;
+    }
+
+    .box {
+        margin-left: 55px;
     }
 
     .main_text {
@@ -440,5 +471,13 @@ section {
         font-weight: 400;
         line-height: 46.88px;
         text-align: center;
+    }
+
+    .box {
+        margin-left: 12px;
+    }
+
+    .box_img {
+        left: 30px;
     }
 }
